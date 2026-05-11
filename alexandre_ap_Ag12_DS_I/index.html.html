@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- ↑ Declara o tipo de documento como HTML5 -->
+
+<html lang="pt-br">
+<!-- ↑ Abre o documento HTML com idioma português do Brasil -->
+
+<head>
+<!-- ↑ Início do cabeçalho da página -->
+
+    <meta charset="UTF-8">
+    <!-- ↑ Permite usar acentos e caracteres especiais -->
+
+    <title>Meus sites favoritos</title>
+    <!-- ↑ Título da página que aparece na aba do navegador -->
+
+    <style>
+    /* ↑ Início dos estilos CSS para formatação da página */
+
+        /* ESTILO PRINCIPAL - CORPO DA PÁGINA */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* ↑ Fundo com degradê de azul para roxo */
+            font-family: Arial, sans-serif;
+            /* ↑ Define a fonte do texto */
+            padding: 40px 20px;
+            /* ↑ Espaçamento interno: 40px em cima/baixo, 20px laterais */
+        }
+
+        /* CONTAINER PRINCIPAL - CENTRALIZA O CONTEÚDO */
+        .container {
+            max-width: 1200px;
+            /* ↑ Largura máxima de 1200 pixels */
+            margin: 0 auto;
+            /* ↑ Centraliza o container na horizontal */
+            background: white;
+            /* ↑ Fundo branco */
+            border-radius: 20px;
+            /* ↑ Cantos arredondados */
+            padding: 40px;
+            /* ↑ Espaçamento interno */
+        }
+
+        /* TÍTULO PRINCIPAL */
+        h1 {
+            text-align: center;
+            /* ↑ Centraliza o texto */
+            color: #333;
+            /* ↑ Cor cinza escuro */
+        }
+
+        /* GRADE PARA ORGANIZAR OS SITES LADO A LADO */
+        .sites-grid {
+            display: grid;
+            /* ↑ Ativa o layout em grade */
+            grid-template-columns: repeat(5, 1fr);
+            /* ↑ 5 colunas do mesmo tamanho */
+            gap: 20px;
+            /* ↑ Espaço entre os cards */
+            margin-top: 30px;
+            /* ↑ Espaço acima da grade */
+        }
+
+        /* CARD DE CADA SITE */
+        .site-card {
+            background: #f8f9fa;
+            /* ↑ Fundo cinza claro */
+            border-radius: 15px;
+            /* ↑ Cantos arredondados */
+            padding: 20px;
+            /* ↑ Espaçamento interno */
+            text-align: center;
+            /* ↑ Centraliza o conteúdo */
+            
+            /* CORREÇÃO DE ALTURA - TODOS FICAM IGUAIS */
+            display: flex;
+            /* ↑ Ativa o Flexbox dentro do card */
+            flex-direction: column;
+            /* ↑ Organiza os itens em coluna (um em cima do outro) */
+            justify-content: space-between;
+            /* ↑ Empurra o botão para baixo */
+            min-height: 320px;
+            /* ↑ Força todos os cards terem a mesma altura mínima */
+        }
+
+        /* TÍTULO DO SITE DENTRO DO CARD */
+        .site-card h1 {
+            font-size: 1.3em;
+            /* ↑ Tamanho da fonte */
+            margin-bottom: 15px;
+            /* ↑ Espaço abaixo do título */
+        }
+
+        /* IMAGENS DOS SITES */
+        .site-card img {
+            width: 120px;
+            /* ↑ Largura fixa de 120px */
+            height: 120px;
+            /* ↑ Altura fixa de 120px */
+            object-fit: contain;
+            /* ↑ Mantém a proporção da imagem */
+            margin: 10px auto;
+            /* ↑ Margem automática para centralizar */
+        }
+
+        /* BOTÕES DE ACESSO */
+        .btn-link {
+            display: inline-block;
+            /* ↑ Permite definir largura e altura */
+            background: #667eea;
+            /* ↑ Fundo azul */
+            color: white;
+            /* ↑ Texto branco */
+            text-decoration: none;
+            /* ↑ Remove o sublinhado */
+            padding: 10px 15px;
+            /* ↑ Espaçamento interno do botão */
+            border-radius: 25px;
+            /* ↑ Cantos bem arredondados */
+            margin-top: 10px;
+            /* ↑ Espaço acima do botão */
+        }
+
+        /* EFEITO AO PASSAR O MOUSE NO BOTÃO */
+        .btn-link:hover {
+            background: #764ba2;
+            /* ↑ Muda para roxo ao passar o mouse */
+        }
+
+        /* RESPONSIVIDADE - PARA TELAS MENORES */
+        @media (max-width: 900px) {
+            .sites-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* ↑ 2 colunas no tablet */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .sites-grid {
+                grid-template-columns: 1fr;
+                /* ↑ 1 coluna no celular */
+            }
+        }
+    </style>
+    <!-- ↑ Fim dos estilos CSS -->
+
+</head>
+<!-- ↑ Fim do cabeçalho -->
+
+<body>
+<!-- ↑ Início do corpo da página (conteúdo visível) -->
+
+<div class="container">
+<!-- ↑ Container principal que centraliza todo o conteúdo -->
+
+    <!-- TÍTULO PRINCIPAL COM O NOME DO ALUNO -->
+    <h1>🎯 Meus sites favoritos: Alexandre Aparecido 🎯</h1>
+
+    <!-- ============================================= -->
+    <!-- GRADE DE SITES - DIV OBRIGATÓRIA PARA ALINHAR -->
+    <!-- ============================================= -->
+    <div class="sites-grid">
+    <!-- ↑ Esta DIV organiza os cards em 5 colunas lado a lado -->
+
+        <!-- ======================== -->
+        <!-- SITE 1: YouTube          -->
+        <!-- ======================== -->
+        <div class="site-card">
+        <!-- ↑ Cada site deve ficar dentro de uma DIV com class="site-card" -->
+            <h1>📺 YouTube</h1>
+            <!-- ↑ Nome do site usando H1 conforme solicitado -->
+            <img src="youtube.jpg" alt="Logo do YouTube">
+            <!-- ↑ Imagem na mesma pasta do HTML -->
+            <a href="https://www.youtube.com/" target="_blank" class="btn-link">Acessar YouTube</a>
+            <!-- ↑ Link para acessar o site (abre em nova aba) -->
+        </div>
+        <!-- ↑ Fim do card YouTube -->
+
+        <!-- ======================== -->
+        <!-- SITE 2: GitHub           -->
+        <!-- ======================== -->
+        <div class="site-card">
+            <h1>🐙 GitHub</h1>
+            <img src="github.jpg" alt="Logo do GitHub">
+            <a href="https://github.com" target="_blank" class="btn-link">Acessar GitHub</a>
+        </div>
+        <!-- ↑ Fim do card GitHub -->
+
+        <!-- ======================== -->
+        <!-- SITE 3: Google           -->
+        <!-- ======================== -->
+        <div class="site-card">
+            <h1>🔍 Google</h1>
+            <img src="google.jpg" alt="Logo do Google">
+            <a href="https://www.google.com" target="_blank" class="btn-link">Acessar Google</a>
+        </div>
+        <!-- ↑ Fim do card Google -->
+
+        <!-- ======================== -->
+        <!-- SITE 4: Wikipedia        -->
+        <!-- ======================== -->
+        <div class="site-card">
+            <h1>📖 Wikipedia</h1>
+            <img src="wikipedia.jpg" alt="Logo da Wikipedia">
+            <a href="https://www.wikipedia.org" target="_blank" class="btn-link">Acessar Wikipedia</a>
+        </div>
+        <!-- ↑ Fim do card Wikipedia -->
+
+        <!-- ======================== -->
+        <!-- SITE 5: Netflix          -->
+        <!-- ======================== -->
+        <div class="site-card">
+            <h1>🎬 Netflix</h1>
+            <img src="netflix.jpg" alt="Logo da Netflix">
+            <a href="https://www.netflix.com" target="_blank" class="btn-link">Acessar Netflix</a>
+        </div>
+        <!-- ↑ Fim do card Netflix -->
+
+    </div>
+    <!-- ↑ Fim da grade de sites (.sites-grid) -->
+
+</div>
+<!-- ↑ Fim do container -->
+
+</body>
+<!-- ↑ Fim do corpo da página -->
+
+</html>
+<!-- ↑ Fim do documento HTML -->
